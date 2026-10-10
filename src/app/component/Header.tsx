@@ -1,7 +1,7 @@
 import Image from "next/image";
 import React from "react";
 import NavLink from "./NavLink";
-import Link from "next/link";
+import UserInfo from "./UserInfo";
 
 const Header = () => {
   return (
@@ -20,14 +20,8 @@ const Header = () => {
             <p></p>
           </div>
         </div>
-        <div className="flex gap-2">
-          <Link href='/sign-in'>
-          <button className="btn bg-gray-300 rounded-xl">সাইন ইন</button>
-          </Link>
-          <Link href='/sign-up'>
-          <button className="btn bg-green-600 text-white rounded-xl">সাইন আপ</button>
-          </Link>
-        </div>
+        
+        <UserInfo></UserInfo>
       </div>
       <NavLink></NavLink>
     </header>

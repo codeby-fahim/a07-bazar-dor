@@ -49,7 +49,18 @@ const SignInPage = () => {
         transition: Bounce,
       });
     }
-
+  }
+  const handleGithubSign= async()=>{
+    const data = await authClient.signIn.social({
+      provider: "github"
+    })
+    console.log(data);
+  }
+  const handleGoogleSign= async()=>{
+    const data = await authClient.signIn.social({
+      provider: "google"
+    })
+    console.log(data);
   }
   return (
     <div className="grid justify-center items-center my-10 font-sans">
@@ -79,12 +90,12 @@ const SignInPage = () => {
 
             {/* সোশ্যাল বাটন */}
             <div className="grid grid-cols-2 gap-2">
-              <button type="button" className="btn btn-outline border-gray-300 hover:bg-gray-50 text-gray-700 text-xs font-normal">
+              <button onClick={handleGoogleSign} type="button" className="btn btn-outline border-gray-300 hover:bg-gray-50 text-gray-700 text-xs font-normal">
                 <FaGoogle />
                 Google দিয়ে চালিয়ে যান
               </button>
 
-              <button type="button" className="btn btn-outline border-gray-300 hover:bg-gray-50 text-gray-700 text-xs font-normal">
+              <button onClick={handleGithubSign} type="button" className="btn btn-outline border-gray-300 hover:bg-gray-50 text-gray-700 text-xs font-normal">
                  <FaGithub />
                 GitHub দিয়ে চালিয়ে যান
               </button>
