@@ -4,6 +4,7 @@ import "./globals.css";
 import Header from "./component/Header";
 import Marquee from "./component/Marquee";
 import Footer from "./component/Footer";
+import { ToastContainer } from "react-toastify";
 
 const geistSans = Hind_Siliguri({
   weight: ["300","400","500", "600", "700"],
@@ -30,6 +31,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <Marquee></Marquee>
         {children}
         <Footer></Footer>
+        <ToastContainer />
         </body>
     </html>
   );
