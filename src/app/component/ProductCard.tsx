@@ -27,7 +27,6 @@ const ProductCard = ({item}:{item:Product}) => {
     const isNeutral = !item.change.dir || item.change.pct === 0;
   return (
     <Link href={`/productDetail/${item.id}`}>
-      <h2 className='text-6xl'>{item.id}</h2>
     <div
         key={item.id}
         className="bg-[#f8faf8] border border-gray-200/80 rounded-xl p-4 flex flex-col justify-between shadow-sm hover:shadow transition-shadow"

@@ -20,7 +20,7 @@ const Header = () => {
           </div>
         </div>
         <div>
-          <button className="btn btn-success">Sign In</button>
+          <button className="btn btn-success">সাইন ইন</button>
           <button className="btn btn-success">Sign Up</button>
         </div>
       </div>

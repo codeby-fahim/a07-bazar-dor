@@ -1,3 +1,4 @@
+import Link from "next/link";
 import MarqueeText from "react-marquee-text";
 
 interface Market {
@@ -47,8 +48,9 @@ const Marquee = async () => {
         {products.map((item) => {
           const isUp = item.change.dir === "up";
           return (
+            <Link href={`/productDetail/${item.id}`} key={item.id}>
             <div
-              key={item.id}
+              
               className="flex items-center gap-2 mx-4 whitespace-nowrap px-3 py-1 border-r border-gray-200"
             >
               <span className="text-base">
@@ -69,6 +71,7 @@ const Marquee = async () => {
                 {isUp ? "▲" : "▼"} {item.change.pct}%
               </span>
             </div>
+            </Link>
           );
         })}
       </MarqueeText>

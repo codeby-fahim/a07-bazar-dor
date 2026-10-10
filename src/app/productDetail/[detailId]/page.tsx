@@ -1,61 +1,4 @@
 
-
-// interface Market {
-//   market: string;
-//   division: string;
-//   min: number;
-//   max: number;
-// }
-
-// interface Change {
-//   dir: string;
-//   pct: number;
-// }
-
-// interface Product {
-//   id: number;
-//   slug: string;
-//   nameBn: string;
-//   category: string;
-//   categoryNameBn: string;
-//   categoryIcon: string;
-//   unit: string;
-//   image: string;
-//   today: number;
-//   yesterday: number;
-//   lastWeek: number;
-//   lastMonth: number;
-//   change: Change;
-//   markets: Market[];
-// }
-
-// interface PageProps {
-//   params: Promise<{
-//     detailId: number;
-//   }>;
-// }
-
-
-
-// const ProductDetailPage = async({params}:PageProps) => {
-//   const {detailId} = await params;
-//   const res = await fetch(`https://api.abcz.workers.dev/api/bazardor/products/${detailId}`, {cache:"force-cache"});
-//   const data: Product = await res.json();
-//   console.log(data);
-
-//   return (
-//     <div>
-//       <h2>{data.category}</h2>
-//     </div>
-//   );
-// };
-
-// export default ProductDetailPage;
-
-
-
-import Image from 'next/image';
-
 interface Market {
   market: string;
   division: string;
@@ -177,7 +120,7 @@ const ProductDetailPage = async ({ params }: PageProps) => {
               <span className="text-sm text-gray-500">গড় দাম</span>
               <div className="my-2">
                 <span className="text-2xl font-bold text-emerald-600">
-                  ৳{(avgPrice)}
+                  ৳{toBengaliNumber(avgPrice)}
                 </span>
                 <span className="text-sm text-gray-600 ml-1">টাকা</span>
               </div>
