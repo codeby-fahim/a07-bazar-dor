@@ -3,6 +3,7 @@ import {  Hind_Siliguri } from "next/font/google";
 import "./globals.css";
 import Header from "./component/Header";
 import Marquee from "./component/Marquee";
+import Footer from "./component/Footer";
 
 const geistSans = Hind_Siliguri({
   weight: ["300","400","500", "600", "700"],
@@ -28,6 +29,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <Header></Header>
         <Marquee></Marquee>
         {children}
+        <Footer></Footer>
         </body>
     </html>
   );
