@@ -1,4 +1,5 @@
 
+import Link from "next/link";
 import React from "react";
 
 interface INav {
@@ -18,9 +19,10 @@ const NavLink = async () => {
   return (
     <nav className="container mx-auto">
       <div className="flex  gap-5 mt-5">
+        <Link className="font-bold" href='/'>হোম</Link>
       {data.map((d, i: number) => (
         <div key={i}>
-          <li className="list-none"> <span>{d.icon}</span> {d.nameBn}</li>
+          <Link href={`/category/${d.slug}`}><li className="list-none font-bold"> <span>{d.icon}</span> {d.nameBn}</li></Link>
         </div>
       ))}
     </div>

@@ -35,8 +35,8 @@ const Hero = () => {
           <Image
             src="/bazar-hero.png"
             alt="hero logo"
-            height={300}
-            width={300}
+            height={260}
+            width={260}
             className="object-contain"
             priority
           />
