@@ -1,15 +1,54 @@
 
 
+'use client'
 
-
+import { authClient } from "@/lib/auth-client";
 import Link from "next/link";
+import { redirect } from "next/navigation";
 import { FaGithub, FaGoogle } from "react-icons/fa";
+import { Bounce, toast } from "react-toastify";
 
-// export default SignInPage;
+
 
 const SignInPage = () => {
 
-  const onSubmit=()=>{
+  const onSubmit= async(e: React.SubmitEvent<HTMLElement>)=>{
+    e.preventDefault()
+    const formData = new FormData(e.target);
+    const user = Object.fromEntries(formData.entries()) as {email:string, password:string};
+
+    const {data, error} = await authClient.signIn.email({
+      ...user,
+      callbackURL: "/"
+    })
+    if(data){
+       toast.success("Successfully Logged In", {
+        position: "top-right",
+        autoClose: 3000,
+        hideProgressBar: false,
+        closeOnClick: false,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+        transition: Bounce,
+      });
+      redirect("/")
+    }
+
+    if(error){
+      toast.error("Invalid Email and Password", {
+        position: "top-right",
+        autoClose: 3000,
+        hideProgressBar: false,
+        closeOnClick: false,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+        transition: Bounce,
+      });
+    }
 
   }
   return (
