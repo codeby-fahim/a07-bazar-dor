@@ -1,29 +1,32 @@
+
+
+
 import Image from "next/image";
-import React from "react";
+
 import NavLink from "./NavLink";
 import UserInfo from "./UserInfo";
 
 const Header = () => {
   return (
     <header>
-      <div className="container mx-auto p-5 flex justify-between">
-        <div className="flex gap-2">
+      <div className="container mx-auto px-4 sm:px-6 py-4 sm:py-5 flex items-center justify-between gap-4">
+        <div className="flex items-center gap-3">
           <Image
             src="/logo-icon.png"
             alt="logo"
-            height={50}
-            width={50}
-            className="p-3 bg-green-600 rounded-xl"
-          ></Image>
+            height={40}
+            width={40}
+            className="p-2 sm:p-3 bg-green-600 rounded-xl w-10 sm:w-12 h-10 sm:h-12 object-contain"
+          />
           <div>
-            <h2 className="text-2xl font-bold">বাজার দর</h2>
-            <p></p>
+            <h2 className="text-xl sm:text-2xl font-bold">বাজার দর</h2>
+            
           </div>
         </div>
         
-        <UserInfo></UserInfo>
+        <UserInfo />
       </div>
-      <NavLink></NavLink>
+      <NavLink />
     </header>
   );
 };

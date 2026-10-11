@@ -1,6 +1,8 @@
+
 'use client'
 import { authClient } from '@/lib/auth-client';
 import Link from 'next/link';
+import { redirect } from 'next/navigation';
 import { Bounce, toast } from 'react-toastify';
 
 const UserInfo = () => {
@@ -20,26 +22,29 @@ const UserInfo = () => {
         theme: "light",
         transition: Bounce,
       });
+      redirect('/sign-in')
   }
   return (
-    <div >
+    <div>
 
       {user ? (
-        <div className='flex gap-2 items-center font-bold text-blue-600 text-2xl'>
-          <h2>স্বাগতম,{user?.name}</h2>
-          <Link href='/profile'><button className='btn rounded-xl bg-blue-600 text-white'>My Profile</button></Link>
-          <button className='btn bg-green-600 text-white rounded-xl' onClick={handleSignOut}>সাইন আউট</button>
+        <div className='flex flex-wrap items-center justify-end gap-2 sm:gap-3 font-bold text-blue-600 text-sm sm:text-lg md:text-xl'>
+          <h2 className="truncate max-w-30 sm:max-w-50">স্বাগতম, {user?.name}</h2>
+          <Link href='/profile'>
+            <button className='btn btn-sm sm:btn-md rounded-xl bg-blue-600 text-white font-normal text-xs sm:text-sm'>My Profile</button>
+          </Link>
+          <button className='btn btn-sm sm:btn-md bg-green-600 text-white rounded-xl font-normal text-xs sm:text-sm' onClick={handleSignOut}>সাইন আউট</button>
         </div>
       ): (
-        <div className="flex gap-2">
+        <div className="flex items-center gap-2">
           <Link href='/sign-in'>
-          <button className="btn bg-gray-300 rounded-xl">সাইন ইন</button>
+            <button className="btn btn-sm sm:btn-md bg-gray-300 rounded-xl font-normal text-xs sm:text-sm px-3 sm:px-4">সাইন ইন</button>
           </Link>
           <Link href='/sign-up'>
-          <button className="btn bg-green-600 text-white rounded-xl">সাইন আপ</button>
+            <button className="btn btn-sm sm:btn-md bg-green-600 text-white rounded-xl font-normal text-xs sm:text-sm px-3 sm:px-4">সাইন আপ</button>
           </Link>
         </div>
-      )};
+      )}
       
     </div>
   );

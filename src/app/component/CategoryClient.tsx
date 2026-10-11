@@ -1,3 +1,6 @@
+
+
+
 'use client';
 
 import React, { useState } from 'react';
@@ -45,13 +48,13 @@ export default function CategoryClient({ initialProducts, categoryId }: Category
   const categoryIcon = initialProducts.length > 0 ? initialProducts[0].categoryIcon : '📦';
 
   return (
-    <div className="max-w-7xl mx-auto px-4 py-8 space-y-6">
-      <div className="bg-[#f8faf8] border border-gray-200/80 rounded-2xl p-6 shadow-sm flex items-center gap-4">
-        <span className="text-3xl p-3 bg-white rounded-xl border border-gray-100 shadow-xs">
+    <div className="max-w-7xl mx-auto px-3 sm:px-4 lg:px-8 py-6 sm:py-8 space-y-6">
+      <div className="bg-[#f8faf8] border border-gray-200/80 rounded-2xl p-4 sm:p-6 shadow-sm flex items-center gap-4">
+        <span className="text-2xl sm:text-3xl p-2.5 sm:p-3 bg-white rounded-xl border border-gray-100 shadow-xs shrink-0">
           {categoryIcon}
         </span>
         <div>
-          <h1 className="text-xl md:text-2xl font-bold text-gray-900">
+          <h1 className="text-lg sm:text-xl md:text-2xl font-bold text-gray-900">
             {categoryName}
           </h1>
           <p className="text-xs md:text-sm text-gray-500">
@@ -61,11 +64,11 @@ export default function CategoryClient({ initialProducts, categoryId }: Category
       </div>
 
       
-      <div className="bg-[#f8faf8] border border-gray-200/80 rounded-xl p-4 flex flex-col sm:flex-row items-center justify-between gap-4 shadow-sm">
-        <span className="text-sm text-gray-600">
+      <div className="bg-[#f8faf8] border border-gray-200/80 rounded-xl p-4 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 sm:gap-4 shadow-sm">
+        <span className="text-xs sm:text-sm text-gray-600">
           মোট {initialProducts.length}টি পণ্য দেখানো হচ্ছে
         </span>
-        <div className="flex items-center gap-3 w-full sm:w-auto justify-end">
+        <div className="flex items-center justify-between sm:justify-end gap-3 w-full sm:w-auto">
           <span className="text-sm font-medium text-gray-700">সাজান</span>
           <select
             value={sortOrder}
@@ -79,7 +82,7 @@ export default function CategoryClient({ initialProducts, categoryId }: Category
         </div>
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-4">
         {sortedProducts.map((item) => (
           <ProductCard key={item.id} item={item} />
         ))}
