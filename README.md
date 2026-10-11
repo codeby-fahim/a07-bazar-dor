@@ -1,36 +1,53 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🛒 বাজার দর / BazarDor
 
-## Getting Started
+বাজার দর (BazarDor) হলো একটি আধুনিক ওয়েবাসাইট যা বাংলাদেশের স্থানীয় বাজারের নিত্যপ্রয়োজনীয় জিনিসপত্রের প্রতিদিনের দামের আপডেট, বাজারভিত্তিক দামের তুলনা এবং ক্যাটাগরিভিত্তিক ফিল্টারিং প্রদান করে।
 
-First, run the development server:
+🌐 **Live Demo:** [https://a07-bazar-dor-liart.vercel.app/](https://a07-bazar-dor-liart.vercel.app/)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+---
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 📝 Short Description
+বাজার দর অ্যাপ্লিকেশনটির মাধ্যমে ব্যবহারকারীরা খুব সহজেই চাল, ডাল, তেল, সবজি, মাছ, মাংসসহ দৈনন্দিন প্রয়োজনীয় পণ্যের সঠিক ও নিখুঁত বাজার দর জানতে পারবেন। এটি প্রতিদিনের দাম বৃদ্ধি বা হ্রাসের শতকরা হার এবং বিভিন্ন বাজারের সর্বনিম্ন, সর্বাধিক ও গড় দামের তুলনামূলক চিত্র তুলে ধরে।
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🛠️ Technologies Used
 
-## Learn More
+* **Framework:** Next.js (App Router)
+* **Library:** React 19 / React
+* **Styling:** Tailwind CSS, DaisyUI
+* **Authentication:** Better Auth
+* **Icons & Notifications:** React Icons, React Toastify
+* **Language:** TypeScript
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## ✨ 5 Key Features of the Project
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+1. **📊 Real-time Price Tracking & Indicators:** প্রতিটি পণ্যের প্রতিদিনের দামের আপডেট এবং দাম বৃদ্ধি (▲) বা হ্রাস (▼) হওয়ার শতকরা হার লাইভ প্রদর্শন।
+2. **🏷️ Category-wise Filtering & Sorting:** চাল, ডাল, তেল, সবজি ইত্যাদি ক্যাটাগরি অনুযায়ী পণ্য ফিল্টার করার সুবিধা এবং দাম কম থেকে বেশি বা বেশি থেকে কম অনুযায়ী সাজানোর (Sorting) ব্যবস্থা।
+3. **🏬 Market-based Comparative Analysis:** প্রতিটি পণ্যের ডিটেইলস পেজে বিভিন্ন বাজারভিত্তিক (Market-wise) সর্বনিম্ন, সর্বাধিক ও গড় দামের বিস্তৃত বিবরণী ও সারসংক্ষেপ।
+4. **🔐 User Authentication System:** ইমেইল/পাসওয়ার্ড এবং গুগল/গিটহাব সামাজিক মাধ্যমের (Social Auth) মাধ্যমে সাইন-ইন ও সাইন-আপ করার সুব্যবস্থা।
+5. **👤 Profile Management:** ব্যবহারকারী তার প্রোফাইল পেজে নিজের নাম আপডেট করতে পারবেন এবং অ্যাকাউন্টের তথ্যাদি নিয়ন্ত্রণ করতে পারবেন।
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 🚀 Getting Started
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Follow these steps to run the project locally:
+
+### 1. Clone the repository
+<pre><code>git clone YOUR_GITHUB_REPOSITORY_URL
+cd bazar-dor</code></pre>
+
+### 2. Install dependencies
+<pre><code>npm install</code></pre>
+
+### 3. Run the development server
+<pre><code>npm run dev</code></pre>
+
+Open http://localhost:3000 in your browser to see the application.
+
+---
+
+Created with ❤️ by Md Rakibul Islam Fahim
